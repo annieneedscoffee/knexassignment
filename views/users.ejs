@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Users</title>
+    <link rel="stylesheet" type="text/css" href="/Users/charlottespencer/Documents/Galvanize/knexassignment/students.css">
+    <style>
+      body{background-color: #FAEBD7}
+      table, td{border: 1px solid black}
+    </style>
+  </head>
+  <body>
+    <h1>Users</h1>
+    <table>
+      <tr>
+        <input type="text" name="FirstName" value="First Name">
+        <input type="text" name="LastName" value="Last Name">
+        <input type="text" name="Email" value="Email">
+        <input type="text" name="Age" value="Age">
+      <button type="button" name="button">Submit</button>
+        </tr>
+    </table>
+    <table>
+      <tr>
+        <td>id</td>
+        <td>first name</td>
+        <td>last name</td>
+        <td>email</td>
+        <td>age</td>
+        <td># Posts</td>
+      </tr>
+      <% for(var i=0;i<result.length;i++){ %>
+      <tr>
+        <td>
+          <%= result[i].id %>
+        </td>
+        <td>
+            <%= result[i].first_name %>
+            </td>
+            <td>
+            <%= result[i].last_name %>
+        </td>
+        <td>
+        <%=  result[i].email %>
+        </td>
+        <td>
+          <%= result[i].age %>
+        </td>
+        <td>
+<%= result[i].numposts %>
+        </td>
+        <td>
+<button type="button" name="button" class="profilebutton"><a href="./users/1">Profile</a></button>
+        </td>
+      </tr>
+      <% } %>
+  </table>
+<p><%= result %></p>
+  </body>
+</html>

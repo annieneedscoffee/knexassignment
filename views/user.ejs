@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>User</title>
+    <script type="text/javascript">
+    function doublecheck(){
+      alert("Are you sure you want to delete this user?");
+    }
+    </script>
+    <style>
+      *{text-align: center}
+    </style>
+  </head>
+  <body>
+    <h1>User Profile</h1>
+
+
+    <h2>User: <%= result[0].id %> - <%= result[0].first_name %> <%= result[0].last_name%></h2>
+    <span><h3>ID: </h3>
+    <p><%= result[0].id %></p></span>
+    <span><h3>First Name: </h3>
+      <p><%= result[0].first_name %></p></span>
+    <span><h3>Last Name: </h3>
+      <p><%= result[0].last_name %></p></span>
+    <span><h3>Email: </h3>
+      <p><%= result[0].email %></p></span>
+    <span><h3>Age: </h3>
+      <p><%= result[0].age %></p></span>
+    <span><h3>Number of Posts: </h3>
+      <p><%= result[0].numposts %></p></span>
+    <h3>Options</h3>
+    <span><button type="button" name="button">
+      <a href="./1/edit">
+      Edit
+      </a>
+    </button><button type="button" name="delbutton" id ="delbutton" onclick="doublecheck()">Delete</button></span>
+  </body>
+</html>

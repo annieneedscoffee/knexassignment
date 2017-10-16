@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Update</title>
+  </head>
+  <body>
+    <h1>Update Profile Information</h1>
+    <h2>User: <%= result[0].id %> - <%= result[0].first_name %> <%= result[0].last_name%></h2>
+    <span><h3>ID: </h3>
+    <p><%= result[0].id %></p></span>
+    <span><h3>First Name: </h3>
+      <p><%= result[0].first_name %></p>
+<input type="text" name="" value="">
+    </span>
+    <span><h3>Last Name: </h3>
+      <p><%= result[0].last_name %></p>
+<input type="text" name="" value="">
+    </span>
+    <span><h3>Email: </h3>
+      <p><%= result[0].email %></p>
+    <input type="text" name="" value="">
+  </span>
+    <span><h3>Age: </h3>
+      <p><%= result[0].age %></p>
+<input type="text" name="" value="">
+    </span>
+    <span><h3>Number of Posts: </h3>
+      <p><%= result[0].numposts %></p>
+<input type="text" name="" value="">
+    </span>
+    <p>
+    <button type="button" name="button">Update</button></p>
+  </body>
+</html>
